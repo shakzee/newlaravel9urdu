@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/user/{id}', function ($id) {
+    echo 'working main route ' .$id;
+    //return view('welcome');
 });
+
