@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/user/{id}', function ($id) {
-    echo 'working main route ' .$id;
-    //return view('welcome');
+    //echo 'working main route ' .$id;
+
 });
+
+Route::get('/home',[User::class,'index'])->name('xyz');
 
